@@ -1,19 +1,11 @@
-class Calculator {
-    add(a, b) {
-      return a + b;
-    }
-    subtract(a, b) {
-      return a - b;
-    }
-    divide(a, b) {
-      if (b === 0) {
-        throw new Error('Cannot divide by zero');
-      }
-      return a / b;
-    }
-    multiply(a, b) {
-      return a * b;
-    }
-  }
 
-module.exports = new Calculator()
+class Calculator {
+  add = (a, b) => a + b
+  subtract = (a, b) => a - b
+  divide = (a, b) => a / b
+  multiply = (a, b) => a * b
+}
+
+const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+
+module.exports = {Calculator, capitalize}
